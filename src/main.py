@@ -1,6 +1,9 @@
 import discord
 from discord import Message as DiscordMessage
 import logging
+import sys
+print(sys.path)
+
 from src.base import Message, Conversation
 from src.constants import (
     BOT_INVITE_URL,
@@ -10,7 +13,9 @@ from src.constants import (
     MAX_THREAD_MESSAGES,
     SECONDS_DELAY_RECEIVING_MSG,
 )
+
 import asyncio
+
 from src.utils import (
     logger,
     should_block,
@@ -262,6 +267,7 @@ async def on_message(message: DiscordMessage):
         )
     except Exception as e:
         logger.exception(e)
+
 
 
 client.run(DISCORD_BOT_TOKEN)

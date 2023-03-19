@@ -22,7 +22,9 @@ DISCORD_BOT_TOKEN = os.environ["DISCORD_BOT_TOKEN"]
 DISCORD_CLIENT_ID = os.environ["DISCORD_CLIENT_ID"]
 OPENAI_API_KEY = os.environ["OPENAI_API_KEY"]
 
-ALLOWED_SERVER_IDS: List[int] = []
+ALLOWED_SERVER_IDS: List[int] = [
+    1061699073410875512
+]
 server_ids = os.environ["ALLOWED_SERVER_IDS"].split(",")
 for s in server_ids:
     ALLOWED_SERVER_IDS.append(int(s))
